@@ -1,19 +1,17 @@
 import { Component } from "@angular/core";
-import { fade } from './../animations';
-
+import { fade } from "./../animations";
 
 @Component({
   selector: "todos",
   templateUrl: "./todos.component.html",
   styleUrls: ["./todos.component.css"],
-  animations: [ fade ]
+  animations: [fade]
 })
-
 export class TodosComponent {
   items: any[] = [
-    "Wash the dishes",
-    "Call the accountant",
-    "Apply for a car insurance"
+    "faire la vaisselle",
+    "appeller papa",
+    "s'inscrire au cours de yoga"
   ];
 
   addItem(input: HTMLInputElement) {
