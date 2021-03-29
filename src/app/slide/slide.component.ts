@@ -2,12 +2,12 @@ import { Component } from "@angular/core";
 import { slide } from "./../animations";
 
 @Component({
-  selector: "todos",
-  templateUrl: "./todos.component.html",
-  styleUrls: ["./todos.component.css"],
+  selector: "slide",
+  templateUrl: "./slide.component.html",
+  styleUrls: ["./slide.component.css"],
   animations: [slide]
 })
-export class TodosComponent {
+export class SlideComponent {
   items: any[] = [
     "faire la vaisselle",
     "appeller papa",
