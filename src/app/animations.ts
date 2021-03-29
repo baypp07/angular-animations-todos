@@ -24,3 +24,12 @@ export let fade = trigger("fade", [
 //     transition("* => void", [animate(2000, style({ opacity: 0 }))])
 //   ])
 // ]
+
+export let slide = trigger("slide", [
+  transition(":enter", [
+    style({ transform: "translateX(-10px" }),
+    animate(500)
+  ]),
+
+  transition(":leave", [animate(500, style({ transform: "translateX(-100%" }))])
+]);

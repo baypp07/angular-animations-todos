@@ -7,10 +7,11 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { TodosComponent } from "./todos/todos.component";
 import { ZippyComponent } from "./zippy/zippy.component";
+import { SlideComponent } from './slide/slide.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
-  declarations: [AppComponent, HelloComponent, TodosComponent, ZippyComponent],
+  declarations: [AppComponent, HelloComponent, TodosComponent, ZippyComponent, SlideComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

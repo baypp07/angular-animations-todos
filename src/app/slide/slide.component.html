@@ -1,11 +1,11 @@
-<h1>Todos fadein & fadeout</h1>
+<h1>Todos Slides</h1>
 
 <input #itemInput class="form-control" (keyup.enter)="addItem(itemInput)" />
 
 <div *ngIf="items" class="list-group">
   <button
     type="button"
-    @fade
+    @slide
     *ngFor="let item of items"
     (click)="removeItem(item)"
     class="list-group-item"
@@ -13,5 +13,3 @@
     {{ item }}
   </button>
 </div>
-
-
