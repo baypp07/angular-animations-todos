@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 
-import { bounceOutRightAnimation } from "./../animations";
+import { bounceOutRightAnimation, fadeInAnimation } from "./../animations";
 import {
   trigger,
   transition,
@@ -14,8 +14,14 @@ import {
   templateUrl: "./todos.component.html",
   styleUrls: ["./todos.component.css"],
   animations: [
-        trigger("todoAnimation", [
-      transition(":enter", [style({ opacity: 0 }), animate(2000)]),
+    trigger("todoAnimation", [
+      transition(":enter", [
+        useAnimation(fadeInAnimation, {
+          params: {
+            duration: "500ms"
+          }
+        })
+      ]),
       transition(":leave", [
         style({ backgroundColor: "red" }),
         animate(1000),
@@ -30,6 +36,13 @@ export class TodosComponent {
     "appeller papa",
     "s'inscrire au cours de yoga"
   ];
+
+  animationStarted($event) {
+    console.log($event);
+  }
+  animationDone($event) {
+    console.log($event);
+  }
 
   addItem(input: HTMLInputElement) {
     this.items.splice(0, 0, input.value);
