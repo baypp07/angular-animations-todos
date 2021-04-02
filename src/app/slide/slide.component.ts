@@ -1,11 +1,14 @@
 import { Component } from "@angular/core";
 import { slide } from "./../animations";
 
+
 @Component({
   selector: "slide",
   templateUrl: "./slide.component.html",
   styleUrls: ["./slide.component.css"],
-  animations: [slide]
+  animations: [slide
+
+  ]
 })
 export class SlideComponent {
   items: any[] = [

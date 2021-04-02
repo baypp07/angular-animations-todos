@@ -4,8 +4,28 @@ import {
   transition,
   style,
   animate,
-  keyframes
+  keyframes,
+  animation, useAnimation
 } from "@angular/animations";
+
+export let bounceOutRightAnimation = animation(
+  animate(
+    "500ms ease-out",
+    keyframes([
+      style({
+        offset: 0.2,
+        opacity: 1,
+        transform: "translate3d(-20px, 0, 0) scaleX(0.9)"
+      }),
+      style({
+        offset: 1,
+        opacity: 0,
+        transform: "translate3d(2000px, 0, 0) scaleX(2)"
+      }),
+    ])
+  )
+);
+
 
 export let fade = trigger("fade", [
   state("void", style({ opacity: 0 })),
@@ -45,23 +65,8 @@ export let keyframesanim = trigger("keyframesanim", [
     style({ transform: "translateX(-10px" }),
     animate(500)
   ]),
-
-  transition(":leave", [
-    animate(
-      "500ms ease-out",
-      keyframes([
-        style({
-          offset: 0.2,
-          opacity: 1,
-          transform: "translate3d(-20px, 0, 0) scaleX(0.9)"
-        }),
-        style({
-          offset: 1,
-          opacity: 0,
-          transform: "translate3d(2000px, 0, 0) scaleX(2)"
-        })
-      ])
-    )
-  ])
+  transition(":leave", 
+    useAnimation(bounceOutRightAnimation)
+  )
 ]);
 //https://github.com/animate-css/animate.css/blob/main/source/bouncing_exits/bounceOutRight.css
