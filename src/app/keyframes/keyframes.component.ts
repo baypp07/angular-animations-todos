@@ -7,7 +7,7 @@ import { keyframesanim } from "./../animations";
   styleUrls: ["./keyframes.component.css"],
   animations: [keyframesanim]
 })
-export class keyframesComponent {
+export class KeyframesComponent {
   items: any[] = [
     "faire la vaisselle",
     "appeller papa",

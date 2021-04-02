@@ -53,14 +53,15 @@ export let keyframesanim = trigger("keyframesanim", [
         style({
           offset: 0.2,
           opacity: 1,
-          transform: "translateX(20px)"
+          transform: "translate3d(-20px, 0, 0) scaleX(0.9)"
         }),
         style({
           offset: 1,
           opacity: 0,
-          transform: "translateX(-100%)"
+          transform: "translate3d(2000px, 0, 0) scaleX(2)"
         })
       ])
     )
   ])
 ]);
+//https://github.com/animate-css/animate.css/blob/main/source/bouncing_exits/bounceOutRight.css
