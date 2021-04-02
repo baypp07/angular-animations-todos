@@ -8,7 +8,7 @@ import {
   animate,
   useAnimation,
   query,
-  animateChild, group
+  animateChild, group, stagger
 } from "@angular/animations";
 
 @Component({
@@ -25,7 +25,8 @@ import {
           }),
           animate(1000)
         ]),
-        query('@todoAnimation', animateChild())
+        query('@todoAnimation', 
+        stagger(200,animateChild()))
       ])
       ])
     ]),
