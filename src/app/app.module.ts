@@ -8,10 +8,11 @@ import { HelloComponent } from "./hello.component";
 import { TodosComponent } from "./todos/todos.component";
 import { ZippyComponent } from "./zippy/zippy.component";
 import { SlideComponent } from './slide/slide.component';
+import { KeyframesComponent } from './keyframes/keyframes.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, BrowserAnimationsModule],
-  declarations: [AppComponent, HelloComponent, TodosComponent, ZippyComponent, SlideComponent],
+  declarations: [AppComponent, HelloComponent, TodosComponent, ZippyComponent, SlideComponent, KeyframesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
