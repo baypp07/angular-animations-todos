@@ -6,7 +6,9 @@ import {
   transition,
   style,
   animate,
-  useAnimation
+  useAnimation,
+  query,
+  animateChild, group
 } from "@angular/animations";
 
 @Component({
@@ -14,6 +16,19 @@ import {
   templateUrl: "./todos.component.html",
   styleUrls: ["./todos.component.css"],
   animations: [
+    trigger("todosAnimation", [
+      transition(":enter", [
+        group([
+        query("h2", [
+          style({
+            transform: "translateY(-20px"
+          }),
+          animate(1000)
+        ]),
+        query('@todoAnimation', animateChild())
+      ])
+      ])
+    ]),
     trigger("todoAnimation", [
       transition(":enter", [
         useAnimation(fadeInAnimation, {
